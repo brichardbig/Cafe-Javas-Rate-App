@@ -37,14 +37,20 @@ html, body, [data-testid="stAppViewContainer"] {
     margin: 1.5rem 0;
 }
 
-textarea {
+textarea, textarea:focus, [data-testid='stTextArea'] textarea {
     background: #ffffff !important;
     border: 1.5px solid #ddc9a8 !important;
     border-radius: 12px !important;
     color: #2c1f0e !important;
+    caret-color: #2c1f0e !important;
     font-family: 'DM Sans', sans-serif !important;
+    -webkit-text-fill-color: #2c1f0e !important;
 }
-textarea:focus { border-color: #c9943a !important; }
+textarea:focus, [data-testid='stTextArea'] textarea:focus {
+    border-color: #c9943a !important;
+    caret-color: #2c1f0e !important;
+    -webkit-text-fill-color: #2c1f0e !important;
+}
 
 [data-testid="stButton"] > button {
     background: linear-gradient(135deg, #c9943a, #a0722a) !important;
@@ -215,7 +221,7 @@ st.markdown("""
 <div class="hero">
   <span class="hero-icon">☕</span>
   <h1>Cafe Javas Review Rater</h1>
-  <p>Type your review and i rate it</p>
+  <p>Paste a customer review — the model predicts its star rating</p>
 </div>
 <div class="divider"></div>
 """, unsafe_allow_html=True)
