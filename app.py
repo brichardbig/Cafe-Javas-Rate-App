@@ -221,7 +221,7 @@ st.markdown("""
 <div class="hero">
   <span class="hero-icon">☕</span>
   <h1>Cafe Javas Review Rater</h1>
-  <p>Paste a customer review — the model predicts its star rating</p>
+  <p>Type your review below and I predict your rating</p>
 </div>
 <div class="divider"></div>
 """, unsafe_allow_html=True)
