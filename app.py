@@ -3,7 +3,7 @@ import joblib
 import re
 from pathlib import Path
 
-# ── Page config (must be first) ──────────────────────────────────────────────
+# ── Page config ──────────────────────────────────────────────
 st.set_page_config(page_title="Cafe Javas · Review Rater", page_icon="☕", layout="centered")
 
 # ── Styling ──────────────────────────────────────────────────────────────────
@@ -90,7 +90,7 @@ textarea:focus, [data-testid='stTextArea'] textarea:focus {
 </style>
 """, unsafe_allow_html=True)
 
-# ── Preprocessing (mirrors notebook exactly) ─────────────────────────────────
+# ── Preprocessing ─────────────────────────────────
 STOPWORDS = set([
     'i','me','my','myself','we','our','ours','you','your','yours','he','him','his',
     'she','her','hers','it','its','they','them','their','what','which','who','this',
@@ -276,6 +276,6 @@ if go:
 
 st.markdown("""
 <div class="app-footer">
-  <strong>SVM</strong> · TF-IDF + SVD · Trained on Cafe Javas TripAdvisor reviews
+  <strong>SVM</strong> · TF-IDF + SVD · Trained on Cafe Javas TripAdvisor reviews <i>by B. Richards<i>
 </div>
 """, unsafe_allow_html=True)
